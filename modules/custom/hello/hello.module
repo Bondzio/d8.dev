@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_cron().
+ */
+ 
+function hello_cron() {
+	 \Drupal::messenger()->addMessage(t('Hello CRON'));
+
+}
+
+/**
+ * Implements hook_cron().
+ */
+function hello_user_login($account) {
+	$name = $account->getDisplayName();
+	\Drupal::messenger()->addMessage(t('Welcome ').$name);
+
+}
