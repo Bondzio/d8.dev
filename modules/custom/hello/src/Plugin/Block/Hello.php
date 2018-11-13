@@ -18,11 +18,11 @@ class Hello extends BlockBase {
   * Implements Drupal\Core\Block\BlockBase::build().
   */
   public function build() {
-	  kint(\Drupal::service('date.formatter')->format(time(),'long'));
+	  //kint(\Drupal::service('date.formatter')->format(time(),'long'));
 		
 	  $build = [
 		'#markup' => $this->t('Welcome %time', [
-			'%time' => \Drupal::service('datetime.time')->getCurrentTime()
+			'%time' => \Drupal::service('date.formatter')->format(time(), 'custom', 'H:i s\s')
 		]),
 	  ];
 	  return $build;
