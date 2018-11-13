@@ -1,5 +1,39 @@
 <?php
+/*
+class HelloBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
+  protected $dateFormatter;
+  protected $currentUser;
+  protected $time;
+  public function __construct(array $configuration,
+                              $plugin_id,
+                              $plugin_definition,
+                              DateFormatter $dateFormatter,
+                              AccountProxyInterface $currentUser,
+                              TimeInterface $time) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->dateFormatter = $dateFormatter;
+    $this->currentUser = $currentUser;
+    $this->time = $time;
+  }
+*/
+  /**
+   * {@inheritdoc}.
+   */
+   /*
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('date.formatter'),
+      $container->get('current_user'),
+      $container->get('datetime.time')
+    );
+  }
+  
+  
+  */
 namespace Drupal\hello\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
