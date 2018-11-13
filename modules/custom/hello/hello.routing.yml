@@ -13,3 +13,10 @@ hello.json:
     _controller: '\Drupal\hello\Controller\JsonController::content'
   requirements:
     _access: 'TRUE'
+hello.node.list:
+  path: '/node-list'
+  defaults:
+    _title: 'Nodes list'
+    _controller: '\Drupal\hello\Controller\NodeListController::content'
+  requirements:
+    _access: 'TRUE'
