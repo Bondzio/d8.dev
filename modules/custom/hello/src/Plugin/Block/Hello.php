@@ -58,6 +58,10 @@ class Hello extends BlockBase {
 		'#markup' => $this->t('Welcome %time', [
 			'%time' => \Drupal::service('date.formatter')->format(time(), 'custom', 'H:i s\s')
 		]),
+		'#cache' => [
+			'keys' => ['cache_toto'],
+			'max-age' => '3',
+		],
 	  ];
 	  return $build;
   }
