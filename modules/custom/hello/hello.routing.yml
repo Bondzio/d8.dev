@@ -22,3 +22,11 @@ hello.user_statistics:
   requirements:
     _access: 'TRUE'
     user: '\d+'
+
+hello.form_calculator:
+  path: '/calculator'
+  defaults:
+    _title: 'Drupal Calculator'
+    _form: '\Drupal\hello\Form\HelloForm'
+  requirements:
+    _access: 'TRUE'
