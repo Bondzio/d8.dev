@@ -15,16 +15,20 @@ function hello_cron() {
 function hello_user_login($account) {
 	$name = $account->getDisplayName();
 	\Drupal::messenger()->addMessage(t('Welcome ').$name);
-
-	$database = \Drupal::database();
-	$database->insert('hello_user_statistics')
-	  ->fields([
-			'uid' => $account->id(),
-			'action' => '1',
-			'time' => REQUEST_TIME,
-			])
-	  ->execute();
 	
+	/*$roles = \Drupal::config('hello.settings')->get('user_statistics_roles');
+	$user_roles = $account->getAccount()->getRoles();;
+	$diff = array_intersect($roles, $user_roles);
+	if (count($diff)>'0'){ */
+		$database = \Drupal::database();
+		$database->insert('hello_user_statistics')
+		  ->fields([
+				'uid' => $account->id(),
+				'action' => '1',
+				'time' => REQUEST_TIME,
+				])
+		  ->execute();
+	//}
 
 }
 
