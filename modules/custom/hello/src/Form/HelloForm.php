@@ -56,7 +56,14 @@ class HelloForm extends FormBase{
         }
 
     }
+    /*public function validateTextAjax(array &$form, FormStateInterface $form_state){
+        $css = ['border' => '2px solid green'];
+        $message = 'Ajax message: ' . $form_state->getValue('text');
 
+        $response = new AjaxResponse();
+        $response->addCommand(new CssCommand('#edit-text',$css));
+        $response->addCommand(new HtmlCommand('.text-message'))
+    } */
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
         // TODO: Implement submitForm() method.
