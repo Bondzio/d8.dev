@@ -1,0 +1,10 @@
+hello.calculator:
+  title: 'Calculator'
+  route_name: hello.calculator
+  base_route: hello.hello
+
+hello.user_statistics:
+  title: 'Connections'
+  route_name: hello.user_statistics
+  base_route: entity.user.canonical
+  weight: 5

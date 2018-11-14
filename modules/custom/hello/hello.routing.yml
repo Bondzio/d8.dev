@@ -13,11 +13,12 @@ hello.json:
     _controller: '\Drupal\hello\Controller\JsonController::content'
   requirements:
     _access: 'TRUE'
-hello.node.list:
-  path: '/node-list/{nodetype}'
+
+hello.user_statistics:
+  path: '/user/{user}/statistics'
   defaults:
-    _title: 'Nodes list'
-    _controller: '\Drupal\hello\Controller\NodeListController::content'
-    nodetype: NULL
+    _title: 'User stats'
+    _controller: '\Drupal\hello\Controller\UserStatisticsController::content'
   requirements:
     _access: 'TRUE'
+    user: '\d+'
